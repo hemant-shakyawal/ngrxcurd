@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h2>Create movie</h2>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Movie name</mat-label>
+        <input name="name" [(ngModel)]="newMovie.name" matInput />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Total earning</mat-label>
+        <input
+          name="earning"
+          [(ngModel)]="newMovie.earning"
+          type="number"
+          matInput
+          placeholder="In million"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Release date</mat-label>
+        <input
+          name="releaseDate"
+          [(ngModel)]="newMovie.releaseDate"
+          matInput
+          [matDatepicker]="picker"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <button mat-raised-button color="accent" style="margin-left: 33%">
+        Add Movie
+      </button>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <app-movielist [movies]='movies'></app-movielist>
+  </div>
+</div>
