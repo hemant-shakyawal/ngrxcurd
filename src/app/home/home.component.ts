@@ -21,16 +21,16 @@ export class HomeComponent implements OnInit {
   }
   getAllMoviesdetails(): void {
     this.Store.dispatch(getMoviesDetailaction());
-    this.moviedata.getMoviedetails().subscribe((movies: Movie[]) => {
-      this.movies = movies;
-    });
+    // this.moviedata.getMoviedetails().subscribe((movies: Movie[]) => {
+    //   this.movies = movies;
+    // });
   }
 
   addMovies(): void {
     this.Store.dispatch(addMoviesDetailaction(this.newMovie));
-    this.moviedata.addmovie(this.newMovie).subscribe((res) => {
-      this.getAllMoviesdetails();
-      this.newMovie = new Movie();
-    });
+    // this.moviedata.addmovie(this.newMovie).subscribe((res) => {
+    //   this.getAllMoviesdetails();
+    //   this.newMovie = new Movie();
+    // });
   }
 }

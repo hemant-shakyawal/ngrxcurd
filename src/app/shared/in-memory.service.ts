@@ -15,25 +15,25 @@ export class InMemoryService implements InMemoryDbService {
   private mockMovies(): Movie[] {
     const movie = new Movie(
       1,
-      'Avengers: Endgame',
+      'Doctor strange in the multiverse of madness',
       2798,
-      new Date('26 Apr, 2019 05:30:00')
+      new Date('26 Apr, 2022 05:30:00')
     );
     // movie.id = 1;
 
     const movie1 = new Movie(
       2,
-      'Avengers: Infinity War',
+      'Spider-Man: No Way Home',
       2048,
-      new Date('27 Apr, 2018 05:30:00')
+      new Date('17 Dec, 2021 05:30:00')
     );
     // movie1.id = 2;
 
     const movie2 = new Movie(
       3,
-      'Age of Ultron',
+      'Eternals',
       1403,
-      new Date('01 May, 2015 05:30:00')
+      new Date('05 Nov, 2021 05:30:00')
     );
     // movie2.id = 3;
 
